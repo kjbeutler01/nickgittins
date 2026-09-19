@@ -13,7 +13,7 @@ for(const file of htmlFiles) {
  assert.match(html,/<meta name="description" content="[^"]+">/);
  assert.equal((html.match(/<h1[ >]/g)||[]).length,1,`One h1 required: ${file}`);
  for(const [,ref] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
-  if(/^(https?:|mailto:|data:)/.test(ref)) continue;
+  if(/^(https?:|mailto:|tel:|data:)/.test(ref)) continue;
   const [url,fragment]=ref.split('#');
   let target=url?path.resolve(root,'.'+url):file;
   if(fs.existsSync(target)&&fs.statSync(target).isDirectory())target=path.join(target,'index.html');

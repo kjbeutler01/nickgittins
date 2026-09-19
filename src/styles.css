@@ -25,7 +25,7 @@
  .brand { display: flex; align-items: center; gap: 1rem; }
  .monogram { font-family: var(--font-serif); font-size: 2.7rem; line-height: 1; color: var(--accent); }
  .brand-name { font-size: .875rem; font-weight: 500; }
- nav { display: flex; align-items: center; gap: 2.5rem; font-size: .875rem; }
+ nav { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 2.5rem; font-size: .875rem; }
  nav a { display: flex; gap: .3rem; align-items: center; min-height: 44px; position: relative; }
  nav a::after { content: ''; position: absolute; bottom: 6px; left: 0; width: 100%; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 180ms var(--ease-out); }
  nav a[aria-current]::after { transform: scaleX(1); }
@@ -104,7 +104,7 @@
  .footer-top .eyebrow { color: var(--accent); }
  .footer-name { display: block; font-family: var(--font-serif); font-size: 2.8rem; font-weight: 400; line-height: 1.1; margin-top: 16px; }
  .footer-name span { color: var(--accent); }
- .footer-links { display: flex; gap: 2rem; margin-top: 20px; }
+ .footer-links { display: flex; flex-wrap: wrap; gap: .75rem 2rem; margin-top: 20px; }
  .footer-bottom { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 2rem; padding-block: 24px; font-size: .75rem; color: var(--muted); }
  .skip-link { position: fixed; top: 12px; left: 12px; z-index: 50; padding: 10px 16px; background: var(--ink); color: white; transform: translateY(-150%); }
  .skip-link:focus { transform: translateY(0); }
@@ -244,6 +244,11 @@
   .cv-header h1 { font-size: 3.2rem; }
   .cv-section { grid-template-columns: 1fr; gap: 28px; padding-block: 40px; }
   .cv-role { grid-template-columns: 1fr; gap: 8px; }
+ }
+ @media (max-width: 380px) {
+  .site-header { flex-wrap: wrap; padding-block: 16px; gap: 4px 12px; }
+  .brand-name { display: inline; }
+  nav { width: 100%; justify-content: space-between; gap: 4px; }
  }
  @media (prefers-reduced-motion: reduce) {
   .enter,.portrait-panel.enter { animation-name: gentle-arrive; animation-duration: 200ms; animation-delay: 0ms; }

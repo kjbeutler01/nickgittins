@@ -16,7 +16,7 @@ Open http://127.0.0.1:4173. Rebuild and refresh after source edits. `npm run che
 
 ## Editing
 
-- `src/site.js`: identity, contact email, project copy, and experience.
+- `src/site.js`: identity, contact email and phone number, project copy, and experience.
 - `scripts/build.mjs`: shared templates and page content.
 - `src/styles.css`: Tailwind CSS entrypoint and editorial design system.
 - `src/site-client.js`: keyboard animation handling; reading and navigation work without JavaScript.
@@ -29,7 +29,7 @@ The PDF is an export of the supplied Word document, preserving its wording. If t
 
 ## Content follow-ups
 
-1. Set `site.email` in `src/site.js` to Nicholas's preferred public email and rebuild. Contact links appear automatically; no address has been invented.
+1. Public contact details are configured in `site.email`, `site.phone`, and `site.phoneHref` in `src/site.js`. The email and phone links appear in the contact footer on every page.
 2. Review first-person portfolio copy and current CV wording with Nicholas. The supplied CV still says “current MLIS student” while listing a December 2025 degree. The website uses the listed degree date and does not describe him as a current student.
 3. Add approved work samples or exhibit photography as they become available. Project pages currently explain the contributions documented in the CV; they do not invent outcomes or display fabricated finding aids.
 4. Choose the domain. Then add canonical URLs and a sitemap using the real production origin.

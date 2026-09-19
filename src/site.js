@@ -1,6 +1,8 @@
 export const site = {
   name: 'Nicholas Gittins',
-  email: '',
+  email: 'nick.s.gittins@gmail.com',
+  phone: '(435) 265-8128',
+  phoneHref: '+14352658128',
   description: 'Archives, special collections, and digital preservation. Selected work and experience of Nicholas Gittins.',
 };
 
