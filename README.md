@@ -40,7 +40,9 @@ Cloudflare Pages project: `nicholas-gittins`. Production URL: https://nicholas-g
 
 Source repository: https://github.com/kjbeutler01/nickgittins.
 
-The GitHub Actions workflow in `.github/workflows/cloudflare-pages.yml` builds and checks pull requests. Pushes to `main` and manual workflow runs publish to the existing Cloudflare Pages project. Deployment requires the repository Actions secret `CLOUDFLARE_API_TOKEN` (Cloudflare Pages Edit, restricted to the hosting account) and repository variable `CLOUDFLARE_ACCOUNT_ID`. The workflow checks that the required credential is configured before publishing.
+The GitHub Actions workflow in `.github/workflows/cloudflare-pages.yml` builds and checks pull requests. Once the deployment credential is configured, pushes to `main` and manual workflow runs publish to the existing Cloudflare Pages project. Deployment requires the repository Actions secret `CLOUDFLARE_API_TOKEN` (Cloudflare Pages Edit, restricted to the hosting account) and repository variable `CLOUDFLARE_ACCOUNT_ID`. Until configured, builds and checks run normally and the workflow summary explains that publishing was skipped.
+
+Automatic publishing setup is pending at the owner's request. The account variable is already configured. To finish, create a Cloudflare API token with **Account → Cloudflare Pages → Edit**, restricted to the hosting account; save it as `CLOUDFLARE_API_TOKEN` under this repository's **Settings → Secrets and variables → Actions**; then run **Actions → Build and publish portfolio → Run workflow** on `main`. Never paste the token into source files or commit it.
 
 To publish updates directly from this directory:
 
